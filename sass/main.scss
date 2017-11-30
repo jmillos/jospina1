@@ -1,0 +1,103 @@
+@import 'breakpoint';
+@import 'compass/css3';
+@import 'variables';
+@import 'tabs-menu';
+
+.wrapper {
+    padding: 10%;
+
+    @include breakpoint($w-xs){
+        padding: 5%;
+    }
+
+    .footer {
+        background-color: $gray2;
+        color: $color-text3;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 15px 15px;
+
+        i.fa {
+            font-size: 15px;
+        }
+    }
+}
+
+.button {
+    background-color: $color-button1;
+    border: 0;
+    color: $white;
+    font-size: 11px;
+    padding: 0 15px;
+}
+
+.main-content {
+    border: 2px solid $base-color2;
+    margin: 0 12px;
+    // min-width: 362px;
+
+    .header-text {
+        border-bottom: 1px solid $gray3;
+        color: $color-text2;
+        font-size: 11px;
+        padding: 20px 5% 10px;
+    }
+}
+
+.field-row {
+    border-bottom: 1px solid $gray3;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 7px;
+    padding-top: 4px;
+}
+
+.field-group {
+    margin-bottom: 5px;
+
+    label, .label {
+        color: $color-text2;
+        display: inline-block;
+        font-size: 11px;
+        margin-bottom: 2px;
+    }
+
+    .field-control {
+        background-color: $gray1;
+        border: 0;
+        border-bottom: 1px solid rgba($gray3, .5);
+        border-top: 1px solid $gray2;
+        color: $color-text1;
+        display: block;
+        font-size: 12px;
+        padding: 6px 8px;
+        width: 100%;
+
+        &:disabled {
+            background-color: rgba($gray3, .6);
+            color: $color-text1;
+            cursor: not-allowed;
+        }
+    }
+
+    input,
+    .input {
+
+    }
+
+    select,
+    .select {
+        option {
+            padding: 6px 0;
+        }
+    }
+
+    &.error {
+        input,
+        .input {
+            background-color: rgba($red1, .1);
+            border-bottom-color: rgba($red1, .2);
+            border-top-color: rgba($red1, .12);
+        }
+    }
+}

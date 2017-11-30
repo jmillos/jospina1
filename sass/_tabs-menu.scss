@@ -1,0 +1,104 @@
+ul.tabs-menu {
+    // background-color: $base-color1;
+    border: 2px solid $white;
+    margin: 0;
+    padding: 0;
+
+    li {
+        @include flex-basis(0);
+        @include flex-grow(1);
+        height: $h-tabs;
+        list-style: none;
+        margin: 0 3px;
+        max-width: 100%;
+        position: relative;
+
+        &::before {
+            @include transform(skew(20deg));
+            background: $base-color1;
+            bottom: 0;
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+        }
+
+        &:first-child {
+            margin-left: 0;
+
+            a {
+                margin-left: 12px;
+                z-index: 5;
+            }
+
+            &::after {
+                background-color: $white;
+                bottom: 0;
+                content: '';
+                position: absolute;
+                left: -10px;
+                top: 0;
+                width: 22px;
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+
+            a {
+                margin-right: 12px;
+                z-index: 5;
+            }
+
+            &::after {
+                background-color: $white;
+                bottom: 0;
+                content: '';
+                position: absolute;
+                right: -10px;
+                top: 0;
+                width: 22px;
+            }
+        }
+
+        a {
+            color: $color-text1;
+            font-size: 11px;
+            height: 100%;
+            position: relative;
+            text-align: center;
+
+            span {
+                position: relative;
+            }
+        }
+
+        &.active {
+            height: $h-tabs+5;
+            margin-bottom: -4px;
+
+            &::before {
+                background-color: $white;
+                border: 2px solid $base-color2;
+                border-bottom: 0;
+            }
+
+            a {
+
+            }
+
+            &:first-child {
+                &::after {
+                    border-right: 2px solid $base-color2;
+                }
+            }
+
+            &:last-child {
+                &::after {
+                    border-left: 2px solid $base-color2;
+                }
+            }
+        }
+    }
+}
