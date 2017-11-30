@@ -31,6 +31,22 @@
     padding: 0 15px;
 }
 
+.actions {
+    margin-top: 20px;
+    padding-right: 12px;
+
+    .button {
+        font-size: 13px;
+        margin-left: 3px;
+        padding: 12px 20px;
+        text-transform: uppercase;
+
+        &.btn-cancel {
+            background-color: $gray4;
+        }
+    }
+}
+
 .main-content {
     border: 2px solid $base-color2;
     margin: 0 12px;
@@ -60,6 +76,10 @@
         display: inline-block;
         font-size: 11px;
         margin-bottom: 2px;
+    }
+
+    i.fa {
+        color: $color-text1;
     }
 
     .field-control {
