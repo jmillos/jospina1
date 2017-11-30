@@ -11,7 +11,7 @@
     }
 
     .footer {
-        background-color: $gray2;
+        background-color: rgba($color-text3, .2);
         color: $color-text3;
         font-size: 12px;
         font-weight: bold;
@@ -65,7 +65,25 @@
     margin-left: 0;
     margin-right: 0;
     padding-bottom: 7px;
+    padding-left: 16px;
+    padding-right: 16px;
     padding-top: 4px;
+    position: relative;
+
+    .icon {
+        color: $gray5;
+        cursor: pointer;
+        position: absolute;
+        top: 6px;
+    }
+
+    .icon-left {
+        left: 6px;
+    }
+
+    .icon-right {
+        right: 6px;
+    }
 }
 
 .field-group {

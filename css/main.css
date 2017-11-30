@@ -97,7 +97,7 @@ ul.tabs-menu li.active:last-child::after {
   }
 }
 .wrapper .footer {
-  background-color: #f0f0f0;
+  background-color: rgba(161, 210, 82, 0.2);
   color: #a1d252;
   font-size: 12px;
   font-weight: bold;
@@ -145,7 +145,22 @@ ul.tabs-menu li.active:last-child::after {
   margin-left: 0;
   margin-right: 0;
   padding-bottom: 7px;
+  padding-left: 16px;
+  padding-right: 16px;
   padding-top: 4px;
+  position: relative;
+}
+.field-row .icon {
+  color: #e2e2e2;
+  cursor: pointer;
+  position: absolute;
+  top: 6px;
+}
+.field-row .icon-left {
+  left: 6px;
+}
+.field-row .icon-right {
+  right: 6px;
 }
 
 .field-group {
